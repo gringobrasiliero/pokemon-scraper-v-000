@@ -14,6 +14,7 @@ db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
 
   def self.find(name, type, db)
 pokemon_new = db.execute("SELECT * FROM pokemon WHERE name = 'Pikachu'")
+binding.pry
   end
 
 end
