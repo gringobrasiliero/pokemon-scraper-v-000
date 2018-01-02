@@ -20,8 +20,8 @@ pokemon_new = db.execute("SELECT * FROM pokemon WHERE id=?", id).flatten
 Pokemon.new(id: pokemon_new[0], name: pokemon_new[1], type: pokemon_new[2], db: db)
 
   end
-def alter_hp(new_hp, id)
-db.execute("UPDATE pokemon SET hp = ? WHERE id = ?" new_hp, id)
+def alter_hp(new_hp, db)
+db.execute("UPDATE pokemon SET hp = ? WHERE id = ?" new_hp, self.id)
 end
 
 end
